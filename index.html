@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>25</title>
+
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: calibri;
+            flex-direction: column;
+            gap: 30px;
+            font-size: 25px;
+            text-align: center;
+            height: 100vh;
+            background-color: rgb(210, 210, 210);
+        }
+
+        button {
+            width: 200px;
+            height: 60px;
+            font-size: 23px;
+            background-color: rgb(210, 210, 210);
+            border: 2px solid rgb(50, 50, 50);
+            cursor: pointer;
+            font-family: calibri;
+        }
+
+        #input-1 {
+            box-sizing: border-box;
+            width: 150px;
+            height: 50px;
+            font-size: 20px;
+            background-color: rgb(210, 210, 210);
+            border: 2px solid rgb(50, 50, 50);
+            cursor: pointer;
+            font-family: calibri;
+        }
+
+        #input-2 {
+            box-sizing: border-box;
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+            background-color: rgb(210, 210, 210);
+            border: 2px solid rgb(50, 50, 50);
+            cursor: pointer;
+            font-family: calibri;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <p>შეიყვანე ველში სახელი მის მასივში დასამატებლად.</p>
+
+    <div>
+        <input type="text" id="input-1">
+
+        <input type="button" id="input-2" value="+" onclick="damateba()">
+    </div>
+
+
+    <p>დააჭირე ღილაკს რომ იხილო მასივი.</p>
+
+    <button onclick="dawere()">დააჭირე</button>
+
+    <p id="masivi"></p>
+
+    <script>
+
+        var saxelebi = [];
+
+        function damateba() {
+
+            var sheySaxeli = document.getElementById("input-1");
+
+            saxelebi.push(sheySaxeli.value);
+
+            if (sheySaxeli.value != "") {
+                sheySaxeli.value = "";
+            }
+        }
+
+        function dawere() {
+
+            document.getElementById("masivi").innerHTML = saxelebi;
+        }
+
+    </script>
+
+</body>
+
+</html>
